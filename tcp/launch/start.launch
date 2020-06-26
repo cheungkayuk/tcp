@@ -1,0 +1,6 @@
+<launch>
+    <node name="server" pkg="tcp" type="server.py" output="screen" launch-prefix="xterm -e" />
+    <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node" />
+	<node name="turtle_teleop_key" pkg="turtlesim" type="turtle_teleop_key" output="screen" launch-prefix="xterm -e"/>
+    <node name="client" pkg="tcp" type="client.py" output="screen" launch-prefix="xterm -e" />
+</launch>
